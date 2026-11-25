@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#111412">
+  <meta name="description" content="Planer progresji kalistenicznej z dziennikiem wyników i widokiem tygodnia.">
+  <title>Progresja kalisteniczna</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Nawigacja planera">
+      <a class="brand" href="#umiejetnosci">
+        <span class="brand-mark" data-icon="brand" aria-hidden="true"></span>
+        <span>Progresja<span class="brand-caption">Kalistenika</span></span>
+      </a>
+      <nav class="navigation" aria-label="Widoki">
+        <a href="#umiejetnosci" data-route="umiejetnosci"><span data-icon="grid"></span>Umiejętności</a>
+        <a href="#tydzien" data-route="tydzien"><span data-icon="calendar"></span>Tydzień</a>
+        <a href="#historia" data-route="historia"><span data-icon="history"></span>Historia</a>
+        <a href="#dane" data-route="dane"><span data-icon="download"></span>Dane</a>
+      </nav>
+      <section class="equipment">
+        <h2>Twój sprzęt</h2>
+        <ul>
+          <li><span data-icon="bars"></span>Paraletki</li>
+          <li><span data-icon="band"></span>Gumy oporowe</li>
+          <li><span data-icon="mat"></span>Mata</li>
+          <li><span data-icon="dumbbell"></span>Hantle</li>
+        </ul>
+      </section>
+      <div class="storage"><span data-icon="shield"></span><span>Wyniki zapisują się<br>w tej przeglądarce.</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <span id="breadcrumb">Umiejętności</span>
+        <a class="privacy" href="#dane"><span data-icon="download"></span>Eksport danych</a>
+      </header>
+      <main id="main" tabindex="-1"></main>
+    </div>
+  </div>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"></dialog>
+  <div class="toast" role="status" id="toast"></div>
+  <noscript><p class="noscript">Włącz JavaScript, aby planować progresję i zapisywać wyniki.</p></noscript>
+</body>
+</html>
